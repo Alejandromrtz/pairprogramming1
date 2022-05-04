@@ -1,17 +1,18 @@
 // // paired programming 
 // // easy mode (1)
+// created a arrow function with params of arr.
+// created a array inside of variable arr
   numberSort = (arr) => {
 
     var arr = [1,2,3,4,5,6,7,8,9,10];
-  
+    // filters out the array and checks if number divided by 2 is = 0, if so it'll log even numbers
     let evenNumbers = arr.filter(number => number % 2 == 0);
-  
     console.log("Even numbers: " + evenNumbers);
-  
+  //same as line 8 but odd numbers.
      let oddNumbers = arr.filter(number => number % 2 !== 0);
-  
     console.log("Odd numbers :" + oddNumbers);
   }
+  //runs the function.
    numberSort();
 
 // // easy 2
@@ -42,20 +43,22 @@ function findPrime(arr){
 findPrime(arr);//calling findPrime()
 
 // // medium mode (1)
-
+// we created an arrow function named vowelCheck
+// inside we have a if statement checks if parameter length is equal to 1.
  vowelCheck =(char) => {
     if(char.length == 1) {
     var vowels = new Array('a', 'e', 'i', 'o','u');
     var vowelCheck = false;
-    
-    for (e in vowels) {
-        if(vowels[e] == char) {
+    //created a for loop 
+    for (a in vowels) {
+        if(vowels[a] == char) {
         vowelCheck = true;
      }
     }
     return vowelCheck;
     }
  }
+ //return the whole function, vowelCheck.
  console.log(vowelCheck('a'));
  
     
@@ -84,28 +87,28 @@ console.log('\n');
 // // // medium mode (3)
 
  gcd_two_numbers = (x, y) => {
+     // checks if x is not equal to 'number' OR if y is not equal to 'number' then return false
     if ((typeof x !== 'number') || (typeof y !== 'number')) 
       return false;
+
       //abs runs the absolute value of a number, numbers being x,y.
     x = Math.abs(x);
     y = Math.abs(y);
+    //while loop
     while(y) {
-      let t = y;
+      let n = y;
       y = x % y;
-      x = t;
+      x = n;
     }
     return x;
   }
   
   console.log(gcd_two_numbers(336, 360));
   console.log(gcd_two_numbers(9, 3));
-//learned about line breaks in the console log.
+
+//basically line breaks in the terminal.
  console.log('\n');
   
-
-
-
-
 
 // // // medium mode (4)
 // created an object and listed properties : make, model, etc
@@ -174,8 +177,6 @@ let matchParanthesis = (input) => {
     }  //length of stack becomes 0, then return true
     return stack.length === 0
    }
-   
-   
    console.log(matchParanthesis('(]')) // returns false
    console.log(matchParanthesis('[]')) // returns true
    console.log(matchParanthesis('{}')) // returns true
