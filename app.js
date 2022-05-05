@@ -96,6 +96,7 @@ console.log('\n');
     y = Math.abs(y);
     //while loop
     while(y) {
+        //create variable for n
       let n = y;
       y = x % y;
       x = n;
@@ -161,11 +162,17 @@ Car.runErrands()
 let matchParanthesis = (input) => {
     //deeclare and initialize braces with all type of opening and closing bracket pairwise
     let braces = "{}[]()"
-    let stack = [] //stack to store brakets
-    //Iterate over elements of string 'input'
+    let stack = [] //stores brakets inside of let stack.
+    //for .. of loop , we basically replaced input instead of brakt. 
     for(let brakt of input) {
-    //check if, input string contains braces as we above declared,then store index braktsIndex
+    //finds index brakt 
       let braktsIndex = braces.indexOf(brakt)
+      
+    //   console.log(input);
+    //   console.log('--------------------');
+    //   console.log(brakt);
+    
+
       //stack would add index of opposite index i.e, for '(', stack push index of')' from braces
       if(braktsIndex % 2 === 0) {
         stack.push(braktsIndex + 1)
@@ -180,4 +187,5 @@ let matchParanthesis = (input) => {
    console.log(matchParanthesis('(]')) // returns false
    console.log(matchParanthesis('[]')) // returns true
    console.log(matchParanthesis('{}')) // returns true
+   console.log(matchParanthesis('{[]}')) // returns true
   
