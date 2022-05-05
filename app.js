@@ -16,25 +16,25 @@
    numberSort();
 
 // // easy 2
-//declare and initialize arr[] which store numbers
+//we created an array to store numbers to start off.
 var arr = new Array(10, 18, 19, 29, 33, 35, 47, 66, 83);
 
-// a method to find prime number from arr[] passed as a parameter,
-// and store in new array prime[]
+// we created a method to find the prime number from the area to store into a new array. 
 function findPrime(arr){
-   var prime = [];//declare prime[] to store only prime numbers
-   var count=0; //counter var for prime[]
-   //iterate a loop over arr[]
-   for(var i = 0;i < arr.length; i++){
+   var prime = [];//variable that is set to hold prime numbers.
+   var count=0;
+   //we created a for loop that goes through the array.
+   for(var i = 0 ; i < arr.length; i++){
        var flag = 0;//flag var
-       for(var j = 2 ; j <= arr[i] / 2;j++){//finding prime number
-           if(arr[i] % j === 0){
+       //we created an for loop to find the prime number 
+       for(var j = 2 ; j <= arr[i] / 2;j++){  
+        if(arr[i] % j === 0){
                flag = 1;
                break;
            }
        }
        if(flag === 0){//if flag = 0, then that number is prime
-           prime[count++] = arr[i]; //so store that number in prime[]
+           prime[count++] = arr[i]; //stores number in prime variable we created.
        }
    }//display prime[] on console
    console.log('Prime number are: ')
@@ -47,6 +47,7 @@ findPrime(arr);//calling findPrime()
 // inside we have a if statement checks if parameter length is equal to 1.
  vowelCheck =(char) => {
     if(char.length == 1) {
+        //we created a array to check vowels
     var vowels = new Array('a', 'e', 'i', 'o','u');
     var vowelCheck = false;
     //created a for loop 
@@ -63,21 +64,26 @@ findPrime(arr);//calling findPrime()
  
     
 // medium mode (2)
-function anagramString (a, b)  {
+//created an arrow function. set the parameters of a, b. 
+ anagramString = (a, b) =>  {
+//creates notification if lengths aren't equal.
     let len1 = a.length;
     let len2 = b.length;
     if(len1 !== len2){
        console.log('Invalid Input');
        return
     }
+    //it splits the string sorts it and joins it back into a string
     let str1 = a.split('').sort().join('');
     let str2 = b.split('').sort().join('');
+    // if string 1 is equal to string 2 then it runs true if not it's false.
     if(str1 === str2){
        console.log("True");
     } else { 
        console.log("False");
     }
  }
+ //runs anagramString function with a, b (indian, ndiani);
  anagramString("indian","ndiani");
 
  //learned about line breaks in the console log.
